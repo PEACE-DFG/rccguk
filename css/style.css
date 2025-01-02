@@ -4436,7 +4436,7 @@ html:not(.lt-ie10) .not-animated {
 	width: 36px;
 	height: 36px;
 	margin: 0 auto;
-	border: 3px solid #215D63;
+	border: 3px solid #0b51f3;
 	border-radius: 50%;
 	border-left-color: transparent;
 	border-bottom-color: transparent;
@@ -5451,7 +5451,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-fixed .rd-nav-item:hover .rd-nav-link, .rd-navbar-fixed .rd-nav-item.focus .rd-nav-link, .rd-navbar-fixed .rd-nav-item.active .rd-nav-link, .rd-navbar-fixed .rd-nav-item.opened .rd-nav-link {
 	color: #ffffff;
-	background: #215D63;
+	background: #0b51f3;
 }
 
 .rd-navbar-fixed .rd-nav-item:hover > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.focus > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.active > .rd-navbar-submenu-toggle, .rd-navbar-fixed .rd-nav-item.opened > .rd-navbar-submenu-toggle {
