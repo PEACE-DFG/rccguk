@@ -226,13 +226,11 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      // Initialize EmailJS with your user ID
-      emailjs.init('Qne_OBhJDR_WsUvYE'); // Replace YOUR_USER_ID with your EmailJS user ID.
+      emailjs.init('Qne_OBhJDR_WsUvYE'); 
   
       function sendEmail(event) {
-          event.preventDefault(); // Prevent the default form submission behavior.
+          event.preventDefault(); 
   
-          // Get the form data
           const form = document.getElementById('contact-form');
           const formData = new FormData(form);
   
@@ -249,7 +247,7 @@
           text: 'Your message has been sent successfully. Thank you for reaching out!. We would reach out to you shortly!',
           confirmButtonText: 'OK',
       });
-      form.reset(); // Reset the form fields
+      form.reset(); 
   })
   .catch((error) => {
       Swal.fire({
