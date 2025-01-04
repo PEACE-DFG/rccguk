@@ -717,7 +717,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .section-intro {
-	background: url("../images/pastoradeboye.jpg") no-repeat;
+	background: url("../images/bible-1948778_1280.jpg") no-repeat;
 	background-size: cover;
 	min-height: 49.47917vw;
 	position: relative;
@@ -733,7 +733,7 @@ html [class*='section-'].section-bottom-0 {
   right: 0;
   left: 0;
   background-color: rgba(21, 20, 20, 0.495); /* Semi-transparent background */
-  backdrop-filter: blur(3px); /* Glassy blur effect */
+  /* backdrop-filter: blur(3px); Glassy blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle border for the glass effect */
   z-index: -1; /* Ensures the pseudo-element stays behind the content */
@@ -2100,16 +2100,22 @@ html .group-custom > * {
 	flex: 0 1 100%;
 	margin-bottom: -30px;
 	margin-left: -20px;
+	align-items: center;
+
 }
 
 .unit > * {
 	margin-bottom: 30px;
 	margin-left: 20px;
+	align-items: center;
+
 }
 
 .unit:empty {
 	margin-bottom: 0;
 	margin-left: 0;
+	align-items: center;
+
 }
 
 .unit-body {
@@ -2125,11 +2131,15 @@ html .group-custom > * {
 .unit-spacing-xs {
 	margin-bottom: -15px;
 	margin-left: -7px;
+	align-items: center;
+
 }
 
 .unit-spacing-xs > * {
 	margin-bottom: 15px;
 	margin-left: 7px;
+	align-items: center;
+
 }
 
 /** @section Lists */
@@ -5083,7 +5093,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-brand img {
-	max-width: 55px;
+	max-width: 200px;
 	width: auto;
 	height: auto;
 }
@@ -5988,7 +5998,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
 	width: auto;
 	height: auto;
-	max-width: 94px;
+	max-width: 270px;
 }
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-main-element {
@@ -10391,3 +10401,146 @@ a {
 	background: #d93636;
 }
 
+
+
+
+
+.service-times {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.impact, .service {
+  /* flex: 1 1 300px; */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.228), 0 0 15px 4px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.impact {
+  background-color: rgba(65, 105, 225, 0.705); /* Blue with transparency */
+  box-shadow: 0 0 15px 4px rgba(65, 105, 225, 0.8); /* Glowing effect */
+}
+
+.service {
+  background-color: rgba(222, 57, 11, 0.8); /* Reddish gold with transparency */
+}
+
+.sunday {
+	background-color: rgba(65, 105, 225, 0.532); /* Blue with transparency */
+
+  box-shadow: 0 0 15px 4px rgba(65, 105, 225, 0.656); /* Glowing effect */
+}
+
+.thursday {
+  background-color: rgba(65, 105, 225, 0.44); /* Blue with transparency */
+
+	box-shadow: 0 0 15px 4px rgba(65, 105, 225, 0.8); /* Glowing effect */
+}
+
+.service-times h2, h3, h4 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.service-times span {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.btnr {
+  background-color: white;
+  color: #0b51f3;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnr:hover {
+  background-color: #0b51f3;
+	color:white;
+}
+
+/* Glow Effect on Hover */
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4), 0 0 25px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-times {
+    flex-direction: column;
+  }
+}
+.iconr {
+	width: 40px;
+	height: 40px;
+	filter: drop-shadow(0 0 8px #0b51f3);
+}
+
+.vision-icon {
+	fill: #0b51f3;
+	animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+	0%, 100% {
+			filter: drop-shadow(0 0 8px rgba(0, 123, 255, 0.6));
+	}
+	50% {
+			filter: drop-shadow(0 0 12px rgba(0, 123, 255, 0.8));
+	}
+}
+
+.vision-mission-card {
+	padding: 2rem;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-title {
+	color: #333;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.card-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.card-list li {
+	margin-bottom: 1rem;
+	color: #666;
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.tick-icon {
+	width: 20px;
+	height: 20px;
+	fill: #007bff;
+	flex-shrink: 0;
+	margin-top: 3px;
+	filter: drop-shadow(0 0 4px rgba(0, 123, 255, 0.6));
+}
