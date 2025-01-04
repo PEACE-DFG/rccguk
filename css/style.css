@@ -1554,7 +1554,7 @@ html [class*='section-'].section-bottom-0 {
 
 p.rights {
 	font-size: 14px;
-	color: #5F6970;
+	color: #8d1616;
 }
 
 p.rights a {
@@ -1755,7 +1755,7 @@ p [style*='max-width'] {
 	letter-spacing: .2em;
 	text-transform: uppercase;
 	font-size: 14px;
-	color: #A28951;
+	color: #8d1616;
 }
 
 @media (min-width: 1200px) {
@@ -2243,7 +2243,7 @@ html .list-inline-md > * {
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background-color: #A28951;
+	background-color: #8d1616;
 }
 
 * + .list-marked {
@@ -3999,7 +3999,7 @@ textarea.form-input {
 }
 
 .footer-classic .footer-title {
-	color: #0132a3;
+	color: #8d1616;
 	font-size: 14px;
 	font-weight: 500;
 	letter-spacing: .2em;
@@ -4136,7 +4136,7 @@ textarea.form-input {
 
 .post-classic__caption .post-info {
 	font-size: 14px;
-	color: #A28951;
+	color: #8d1616;
 	margin-bottom: 10px;
 }
 
@@ -5044,7 +5044,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-navbar-search-toggle:hover {
-	color: #A28951;
+	color: #8d1616;
 }
 
 .rd-navbar-static.rd-navbar--is-clone {
