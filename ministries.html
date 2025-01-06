@@ -190,18 +190,31 @@
                     <div class="footer-title">Info</div>
                     <ul class="nav-list">
                       <li><a href="ministries.html">Gallery</a></li>
-                      <li><a href="#donateButton" ><span i>Donate Now</span></a></li>
-
+                      <!-- <li><a href="" id="donateButton" ><span id="donateButton">Donate Now</span></a></li> -->
+                      <li>
+                        <a href="#" id="donateButton2"><span>Donate Now </span></a>
+                      </li>
+                      
+                      <!-- Second Modal -->
+                      <div class="modal" id="donateModal2" style="display: none;">
+                        <div class="modal-content">
+                          <h3>Church Account</h3>
+                          <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
+                          <p><strong>Account Sort Code:</strong> 309950</p>
+                          <p><strong>Account Number:</strong> 61605662</p>
+                          <button class="close-modal" id="closeModal2">Close</button>
+                        </div>
+                      </div>
                     </ul>
                   </div>
                   <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="footer-title">Service Times:</div>
-                    <ul class="nav-list" id="donateButton">
+                    <ul class="nav-list" >
                         <li>Sundays: <br>
-                          Grace Service : 10:00am 
+                          Celebration Service : 10:00am 
                           </li>
                           <li>Wednesdays: <br>
-                            Physical Service : 6:00pm
+                            Dominion Hour : 6:00pm
                             </li>
                     </ul>
                   </div>
@@ -210,7 +223,7 @@
               <div class="col-lg-5 inset-right-100 wow fadeInRight" data-wow-delay=".3s">
                 <div class="footer-title">Contact us</div>
                 <ul class="contact-list">
-                  <li>Behind 14 Whickham View Newcastle upon Tyne, NE15 6UN Questions? Please write us at:<a class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
+                  <li>Behind 14 Whickham View Newcastle <br> upon  Tyne, NE15 6UN <br> Questions? Please write us at:<a class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
                   <li><span>Call us:</span><a class="phone" href="tel:#">07783568067</a></li>
                 </ul>
                 <ul class="social-list">
@@ -240,5 +253,43 @@
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Second Modal
+  const donateButton2 = document.getElementById("donateButton2");
+  const donateModal2 = document.getElementById("donateModal2");
+  const closeModal2 = document.getElementById("closeModal2");
+
+  donateButton2.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    donateModal2.style.display = "flex"; // Show the second modal
+  });
+
+  closeModal2.addEventListener("click", function () {
+    donateModal2.style.display = "none"; // Hide the second modal
+  });
+
+  // Optional: Close modals when clicking outside of them
+  window.addEventListener("click", function (event) {
+    if (event.target === donateModal1) {
+      donateModal1.style.display = "none";
+    }
+    if (event.target === donateModal2) {
+      donateModal2.style.display = "none";
+    }
+  });
+
+  const swiper = new Swiper('.swiper', {
+    effect: 'fade',  // Sets fade transition effect
+    fadeEffect: {
+      crossFade: true  // Enables cross-fade between slides
+    },
+    autoplay: {
+      delay: 5000,  // Changes slide every 5 seconds
+      disableOnInteraction: false  // Continues autoplay after user interaction
+    },
+    speed: 1000,  // Transition speed in milliseconds
+    loop: true  // Enables continuous looping
+  });
+    </script>
   </body>
 </html>
