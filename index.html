@@ -1,230 +1,269 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-  <head>
-    <title>RCCG Praise Sanctuary</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Welcome to RCCG Praise Sanctuary - The PaceSetters">
-    <meta name="keywords" content="RCCG, Praise Sanctuary, church, New Castle">
-    <meta property="og:title" content="RCCG Praise Sanctuary">
-    <meta property="og:description" content="The PaceSetters">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rccgpraisesanctuary.org">
-    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500%7CIbarra+Real+Nova:400,600,600i,700">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <style>
-      .swipe {
-        position: relative;
-        height: 70vh; /* 70% of viewport height - balanced height */
-        width: 100%;
-        max-height: 800px; /* Maximum height to prevent it from becoming too large */
-      }
-      
-      .swiper {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-      
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        height: 100%;
-      }
-      .slide-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        color: white;
-        padding: 0 20px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+
+<head>
+  <title>RCCG Praise Sanctuary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Welcome to RCCG Praise Sanctuary - The PaceSetters">
+  <meta name="keywords" content="RCCG, Praise Sanctuary, church, New Castle">
+  <meta property="og:title" content="RCCG Praise Sanctuary">
+  <meta property="og:description" content="The PaceSetters">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rccgpraisesanctuary.org">
+  <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Roboto:400,500%7CIbarra+Real+Nova:400,600,600i,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <style>
+    .swipe {
+      position: relative;
+      height: 70vh;
+      /* 70% of viewport height - balanced height */
+      width: 100%;
+      max-height: 800px;
+      /* Maximum height to prevent it from becoming too large */
     }
-      
-      .swiper-slide::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      
-      .content-wrapper {
-        position: relative;
-        z-index: 2;
-        height: 100%;
-        display: flex;
-        align-items: center;
-      }
 
-       .slide-title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
 
-  .slide-subtitle {
-    font-size: 1.5rem;
-    font-weight: 900;
-    font-style: italic;
-  }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+    }
 
-  /* Responsive Styles */
-  @media (max-width: 1200px) {
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .swiper-slide::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
     .slide-title {
       font-size: 5rem;
-    }
-
-    .slide-subtitle {
-      font-size: 3rem;
-    }
-  }
-  @media (max-width: 1024px) {
-    .slide-title {
-      font-size: 5rem;
-    }
-
-    .slide-subtitle {
-      font-size: 3rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .slide-title {
-      font-size: 3rem;
-    }
-
-    .slide-subtitle {
-      font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .slide-title {
-      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
 
     .slide-subtitle {
       font-size: 1.5rem;
-    }
-  }
-  @media (max-width: 425px) {
-    .slide-title {
-      font-size: 1.6rem;
+      font-weight: 900;
+      font-style: italic;
     }
 
-    .slide-subtitle {
-      font-size: 1.2rem;
-    }
-  }
-  @media (max-width: 375px) {
-    .slide-title {
-      font-size: 1.3rem;
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .slide-title {
+        font-size: 5rem;
+      }
+
+      .slide-subtitle {
+        font-size: 3rem;
+      }
     }
 
-    .slide-subtitle {
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 375px) {
-    .slide-title {
-      font-size: 1.5rem;
+    @media (max-width: 1024px) {
+      .slide-title {
+        font-size: 5rem;
+      }
+
+      .slide-subtitle {
+        font-size: 3rem;
+      }
     }
 
-    .slide-subtitle {
-      font-size: 1rem;
+    @media (max-width: 768px) {
+      .slide-title {
+        font-size: 3rem;
+      }
+
+      .slide-subtitle {
+        font-size: 2rem;
+      }
     }
-  }
-    </style>
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-  </head>
-  <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
+
+    @media (max-width: 576px) {
+      .slide-title {
+        font-size: 2.5rem;
+      }
+
+      .slide-subtitle {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .slide-title {
+        font-size: 1.6rem;
+      }
+
+      .slide-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .slide-title {
+        font-size: 1.3rem;
+      }
+
+      .slide-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .slide-title {
+        font-size: 1.5rem;
+      }
+
+      .slide-subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
       </div>
+      <p>Loading...</p>
     </div>
-    <div class="page">
-      <header class="section page-header">
-        <!--RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            <div class="rd-navbar-aside-outer rd-navbar-collapse">
-              <div class="rd-navbar-aside">
-                <ul class="list-inline list-inline-md">
-                  <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
-                      <div class="unit-body"><a href="tel:#">02843554156</a></div>
-                      <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
-                      <div class="unit-body"><a href="tel:#">07783568067</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><span class="icon text-middle mdi-map-marker mdi"></span></div>
-                      <div class="unit-body"><a href="#">Behind 14 Whickham View Newcastle upon Tyne, NE15 6UN</a></div>
-                    </div>
-                  </li>
-                </ul>
-                <ul class="social-list">
-                  <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
-                  <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a></li>
-                  <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
-                  <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li> -->
-                </ul>
-              </div>
+  </div>
+  <div class="page">
+    <header class="section page-header">
+      <!--RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
+            <span></span></div>
+          <div class="rd-navbar-aside-outer rd-navbar-collapse">
+            <div class="rd-navbar-aside">
+              <ul class="list-inline list-inline-md">
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
+                    <div class="unit-body"><a href="tel:#">02843554156</a></div>
+                    <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
+                    <div class="unit-body"><a href="tel:#">07783568067</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle mdi-map-marker mdi"></span></div>
+                    <div class="unit-body"><a href="#">Behind 14 Whickham View Newcastle upon Tyne, NE15 6UN</a></div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="social-list">
+                <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
+                <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a>
+                </li>
+                <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span
+                      class="icon fa fa-facebook-f"></span></a></li>
+                <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li> -->
+              </ul>
             </div>
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!--RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!--RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!--RD Navbar Brand-->
-                  <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/Layer_3__1_-removebg-preview.png" alt="" width="100%" height="23px"/><img class="brand-logo-light" src="images/logo-default-189x54.png" alt="" width="100px" height="23px"/></a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="ministries.html">Gallery</a>
-                      </li>
-                      
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
+          </div>
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <!--RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!--RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!--RD Navbar Brand-->
+                <div class="rd-navbar-brand">
+                  <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark"
+                      src="images/Layer_3__1_-removebg-preview.png" alt="" width="100%" height="23px" /><img
+                      class="brand-logo-light" src="images/logo-default-189x54.png" alt="" width="100px"
+                      height="23px" /></a>
                 </div>
               </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="ministries.html">Gallery</a>
+                    </li>
+
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </nav>
-        </div>
-      </header>
-      <!-- Intro
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Intro
       <section class="section section-lg section-intro">
         <div class="container">
           <div class="row justify-content-center">
@@ -236,124 +275,151 @@
         </div>
       </section> -->
 
-      <section class="swipe">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide" style="background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)), url('images/WhatsApp\ Image\ 2025-01-02\ at\ 13.02.12_7345f3ec.jpg')">
-              <div class="slide-content">
-                <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-              </div>
-            </div>
-      
-           
-            </div>
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide" style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner1.jpg')">
-                      <div class="slide-content">
-                        <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                        <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-                      </div>
-                    </div>
-        
-                       <!-- Slide 6 -->
-                       <div class="swiper-slide" style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner2.jpg')">
-                        <div class="slide-content">
-                          <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                          <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-                        </div>
-                      </div>
-      
-            <!-- Slide 3 -->
-            <div class="swiper-slide" style="background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/slide_!.jpg')">
-              <div class="slide-content">
-                <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-              </div>
-            </div>
-      
-            <!-- Slide 4 -->
-            <div class="swiper-slide" style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/WhatsApp\ Image\ 2025-01-02\ at\ 13.02.13_9e55683c.jpg')">
-              <div class="slide-content">
-                <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-              </div>
-               <!-- Slide 2 -->
-            <div class="swiper-slide" style="background:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner3.jpg')">
-              <div class="slide-content">
-                <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary</h2>
-                <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
-              </div>
-            </div>
-
-     
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      
-
-
-      <!--Welcome-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10">
-              <!-- <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">Welcome to Redeemed Christian Church of God,Praise Sanctuary,Newcastle</div> -->
-              <h2 class="wow fadeInRight" data-wow-delay=".2s">Sharing the God’s love with everyone</h2>
-              <p class="text-sm wow fadeInUp" data-wow-delay=".3s">Our mission is helping people find their way back to God. We accomplish this by reaching people far from God, restoring God’s dream for the world, and reproducing this mission in others. There are three key relationships that help you develop a growing relationship with Jesus.</p><a class="shadow btn btn-icon btn-icon-right btn-secondary btn-svg offset-xl-55 wow fadeInUp" href="about-us.html" data-wow-delay=".3s"><span class="svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="#fff">
-                    <path d="M13 10V6H0V4H13V0L18 5L13 10Z" fill=""></path>
-                  </svg></span><span>More about us</span></a>
+    <section class="swipe">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide"
+            style="background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)), url('images/WhatsApp\ Image\ 2025-01-02\ at\ 13.02.12_7345f3ec.jpg')">
+            <div class="slide-content">
+              <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+              </h2>
+              <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
             </div>
           </div>
+
+  <!-- Slide 5 -->
+  <div class="swiper-slide"
+  style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner1.jpg')">
+  <div class="slide-content">
+    <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+    </h2>
+    <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
+  </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="swiper-slide"
+  style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner2.jpg')">
+  <div class="slide-content">
+    <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+    </h2>
+    <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="swiper-slide"
+  style="background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/slide_!.jpg')">
+  <div class="slide-content">
+    <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+    </h2>
+    <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
+  </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="swiper-slide"
+  style="background-image: linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/WhatsApp\ Image\ 2025-01-02\ at\ 13.02.13_9e55683c.jpg')">
+  <div class="slide-content">
+    <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+    </h2>
+    <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
+  </div>
+  <!-- Slide 2 -->
+</div>
+
+<div class="swiper-slide"
+style="background:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('images/banner3.jpg')">
+<div class="slide-content">
+ <h2 class="slide-title" style="color: #0b51f3;text-shadow: 5px 5px 6px white;">Welcome to Praise Sanctuary
+ </h2>
+ <p class="slide-subtitle"><i>'The Pacesetters' Church'</i></p>
+</div>
+</div>
         </div>
-      </section>
-     
-        <!--Welcome-->
-        <section class="section section-lg bg-default">
-          <div class="container">
-            <div class="row row-30 align-items-center flex-column-reverse flex-lg-row">
-              <div class="col-lg-6 inset-right-110">
-                <!-- <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">your Donation matters</div> -->
-                <h2 class="wow fadeInLeft" data-wow-delay=".2s">Message from Lead Pastor</h2>
-                <p class="wow fadeInLeft" data-wow-delay=".3s" style="text-align: justify;">
-                    <span style="font-weight: 800;">
-                  Dear Champions!
-                      <br>
-                    </span>
+      
 
-                   
-It is with great joy and gratitude that I welcome you to RCCG - Praise Sanctuary, The Pacesetters’ Church. A place where God’s presence dwells, destinies are transformed, reclaimed, and lives are empowered to set the pace in every area of life.
 
-Here at Praise Sanctuary, we are committed to worshipping God in spirit and, in truth, growing in His Word, prayer, and building a community of love, faith, and excellence. Whether you are seeking spiritual growth, heartfelt worship, or a deeper connection with God, this is the place for you.
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
 
-We warmly invite you to join us for our services, where you’ll experience inspiring teachings, fervent prayers, and joyful praise that lifts your spirit. Together, let us grow as pacesetters in God’s kingdom, fulfilling His purpose for our lives.
 
-Come as you are, and let God do what only He can do! We can’t wait to welcome you into the family where friends meet friends and families meet families, and we all meet Jesus. God bless you richly.
 
-Stay blessed and remain a pacesetter for Christ!
+    <!--Welcome-->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-10">
+            <!-- <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">Welcome to Redeemed Christian Church of God,Praise Sanctuary,Newcastle</div> -->
+            <h2 class="wow fadeInRight" data-wow-delay=".2s">Sharing the God’s love with everyone</h2>
+            <p class="text-sm wow fadeInUp" data-wow-delay=".3s">Our mission is helping people find their way back to
+              God. We accomplish this by reaching people far from God, restoring God’s dream for the world, and
+              reproducing this mission in others. There are three key relationships that help you develop a growing
+              relationship with Jesus.</p><a
+              class="shadow btn btn-icon btn-icon-right btn-secondary btn-svg offset-xl-55 wow fadeInUp"
+              href="about-us.html" data-wow-delay=".3s"><span class="svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="#fff">
+                  <path d="M13 10V6H0V4H13V0L18 5L13 10Z" fill=""></path>
+                </svg></span><span>More about us</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                </p>
-                <p>
-                  
+    <!--Welcome-->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <div class="row row-30 align-items-center flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 inset-right-110">
+            <!-- <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">your Donation matters</div> -->
+            <h2 class="wow fadeInLeft" data-wow-delay=".2s">Message from Lead Pastor</h2>
+            <p class="wow fadeInLeft" data-wow-delay=".3s" style="text-align: justify;">
+              <span style="font-weight: 800;">
+                Dear Champions!
+                <br>
+              </span>
+
+
+              It is with great joy and gratitude that I welcome you to RCCG - Praise Sanctuary, The Pacesetters’ Church.
+              A place where God’s presence dwells, destinies are transformed, reclaimed, and lives are empowered to set
+              the pace in every area of life.
+
+              Here at Praise Sanctuary, we are committed to worshipping God in spirit and, in truth, growing in His
+              Word, prayer, and building a community of love, faith, and excellence. Whether you are seeking spiritual
+              growth, heartfelt worship, or a deeper connection with God, this is the place for you.
+
+              We warmly invite you to join us for our services, where you’ll experience inspiring teachings, fervent
+              prayers, and joyful praise that lifts your spirit. Together, let us grow as pacesetters in God’s kingdom,
+              fulfilling His purpose for our lives.
+
+              Come as you are, and let God do what only He can do! We can’t wait to welcome you into the family where
+              friends meet friends and families meet families, and we all meet Jesus. God bless you richly.
+
+              Stay blessed and remain a pacesetter for Christ!
+
+            </p>
+            <p>
+
               Warm regards,<br>
               <span style="font-weight: 800;"> Pastor Taiwo </span>
-              <span style="font-weight: 800;">&  Dr. Teniola Kupolati </span> <br>
+              <span style="font-weight: 800;">& Dr. Teniola Kupolati </span> <br>
               (Senior & Executive Pastors, Praise Sanctuary)
-              
-                </p>
-              </div>
-              <div class="col-lg-6 p-xl-0 wow fadeInRight"><img src="images/pastorandwife.jpg" alt="" width="660" height="495"/>
-              </div>
-            </div>
-          </div>
-        </section>
 
-         <!--Posts-->
-      <!-- <section class="section section-lg bg-default">
+            </p>
+          </div>
+          <div class="col-lg-6 p-xl-0 wow fadeInRight"><img src="images/pastorandwife.jpg" alt="" width="660"
+              height="495" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Posts-->
+    <!-- <section class="section section-lg bg-default">
         <div class="container container-custom">
           <div class="text-center">
             <h1>Sermons</h1>
@@ -389,243 +455,270 @@ Stay blessed and remain a pacesetter for Christ!
           </div>
         </div>
       </section> -->
-      <!--Welcome-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row row-30 align-items-center">
-            <div class="col-lg-6 p-xl-0 wow fadeInLeft"><img src="images/home-1-660x495.jpg" alt="" width="660" height="495"/>
-            </div>
-            <div class="col-lg-6 inset-left-110">
-              <div class="pre-title wow fadeInRight" data-wow-delay=".1s">Our Community</div>
-              <h2 class="wow fadeInRight" data-wow-delay=".2s">Sharing the God’s love with everyone</h2>
-              <p class="wow fadeInRight" data-wow-delay=".3s">We experience biblical community through small groups. We contribute our time, talents, and resources to further the Mission of Jesus in our communities and the world.</p><a class="shadow btn btn-icon btn-icon-right btn-primary btn-svg offset-xl-50 wow fadeInUp" href="about-us.html" data-wow-delay=".3s"><span class="svg-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="#fff">
-                    <path d="M13 10V6H0V4H13V0L18 5L13 10Z" fill=""></path>
-                  </svg></span><span>Read more</span></a>
-            </div>
+    <!--Welcome-->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <div class="row row-30 align-items-center">
+          <div class="col-lg-6 p-xl-0 wow fadeInLeft"><img src="images/home-1-660x495.jpg" alt="" width="660"
+              height="495" />
+          </div>
+          <div class="col-lg-6 inset-left-110">
+            <div class="pre-title wow fadeInRight" data-wow-delay=".1s">Our Community</div>
+            <h2 class="wow fadeInRight" data-wow-delay=".2s">Sharing the God’s love with everyone</h2>
+            <p class="wow fadeInRight" data-wow-delay=".3s">We experience biblical community through small groups. We
+              contribute our time, talents, and resources to further the Mission of Jesus in our communities and the
+              world.</p><a class="shadow btn btn-icon btn-icon-right btn-primary btn-svg offset-xl-50 wow fadeInUp"
+              href="about-us.html" data-wow-delay=".3s"><span class="svg-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="#fff">
+                  <path d="M13 10V6H0V4H13V0L18 5L13 10Z" fill=""></path>
+                </svg></span><span>Read more</span></a>
           </div>
         </div>
-      </section>
-      <!--Donation-->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row row-30 align-items-center flex-column-reverse flex-lg-row">
-            <div class="col-lg-6 inset-right-110">
-              <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">your Donation matters</div>
-              <h2 class="wow fadeInLeft" data-wow-delay=".2s">Make a donation</h2>
-              <p class="wow fadeInLeft" data-wow-delay=".3s">
-                Giving is a biblical principle that when lived by, produces a rich harvest in our lives. 
-                Consider donating today and join the wonderful community of our church supporters. Your giving is making a difference in this church, our community, and the world.
-              </p>
-              <a class="shadow btn btn-secondary offset-xl-50 wow fadeInUp" href="#" data-wow-delay=".3s" id="donateButton">Donate now</a>
-              
-              <!-- Modal -->
-              <div class="modal" id="donateModal">
-                <div class="modal-content">
-                  <h3>Church Account</h3>
-                  <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
-                  <p><strong>Account Sort Code:</strong> 309950</p>
-                  <p><strong>Account Number:</strong> 61605662</p>
-                  <button class="close-modal" id="closeModal">Close</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 p-xl-0 wow fadeInRight"><img src="images/home-2-660x495.jpg" alt="" width="660" height="495"/>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Swiper-->
-      <div>
-        <h2 class="text-center">Testimonies</h2>
-
       </div>
-      <section class="section section-lg bg-primary">
+    </section>
+    <!--Donation-->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <div class="row row-30 align-items-center flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 inset-right-110">
+            <div class="pre-title wow fadeInLeft" data-wow-delay=".1s">your Donation matters</div>
+            <h2 class="wow fadeInLeft" data-wow-delay=".2s">Make a donation</h2>
+            <p class="wow fadeInLeft" data-wow-delay=".3s">
+              Giving is a biblical principle that when lived by, produces a rich harvest in our lives.
+              Consider donating today and join the wonderful community of our church supporters. Your giving is making a
+              difference in this church, our community, and the world.
+            </p>
+            <a class="shadow btn btn-secondary offset-xl-50 wow fadeInUp" href="#" data-wow-delay=".3s"
+              id="donateButton">Donate now</a>
 
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="swiper-container swiper-slider swiper-style-1" data-swiper='{"autoplay":{"delay":4567},"effect":"fade"}'>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide context-dark">
-                    <div class="swiper-slide-caption text-center text-lg-left">
-                      <div class="row justify-content-center">
-                        <div class="col-xl-10 p-xl-0">
-                          <div class="row justify-content-center row-20 align-items-center flex-column flex-md-row">
-                            <div class="col-lg-3 p-xl-0"><img src="images/testimony 1.jpg" alt="" width="280" height="349"/>
-                            </div>
-                            <div class="col-lg-9 inset-left-110">
-                              <div class="h3">“I am truly blessed to have been part of Praise Sanctuary this year. It has transformed my faith and nurtured my spiritual growth. The fellowship and teachings have uplifted me and, provided invaluable insights and strength. The love and support from the church family have filled my heart with joy and inspiration.”</div>
-                              <div class="author">Festus Ayomikun</div>
-                              <div class="author-position">Parishioner</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide context-dark">
-                    <div class="swiper-slide-caption text-center text-lg-left">
-                      <div class="row justify-content-center">
-                        <div class="col-xl-10 p-xl-0">
-                          <div class="row justify-content-center align-items-center flex-column flex-md-row row-20">
-                            <div class="col-lg-3 p-xl-0"><img src="images/testimony 2.jpg" alt="" width="280" height="349"/>
-                            </div>
-                            <div class="col-lg-9 inset-left-110">
-                              <div class="h3">“In the short while that the RCCG Praise Sanctuary was established, I have experienced great stability and renewal from wise counsel and sound teaching of The WORD of God.”</div>
-                              <div class="author">Femisayo Olofintila</div>
-                              <div class="author-position">Parishioner</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--Swiper Pagination-->
-                <div class="swiper-pagination"></div>
-                <!--Swiper Navigation-->
-                <div class="swiper-button-prev">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="">
-                    <path d="M5 10V6H18V4H5V0L0 5L5 10Z" fill=""></path>
-                  </svg>
-                </div>
-                <div class="swiper-button-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="">
-                    <path d="M5 10V6H18V4H5V0L0 5L5 10Z" fill=""></path>
-                  </svg>
-                </div>
+            <!-- Modal -->
+            <div class="modal" id="donateModal">
+              <div class="modal-content">
+                <h3>Church Account</h3>
+                <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
+                <p><strong>Account Sort Code:</strong> 309950</p>
+                <p><strong>Account Number:</strong> 61605662</p>
+                <button class="close-modal" id="closeModal">Close</button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    
-      <section class="section section-vide section-lg video-wrap vide" data-vide-bg="video/video-1">
-        <div class="container text-center context-dark">
-          <div class="h1">Join Our Weekly Activities</div>
-          <!-- <p class="text-sm">Sunday : 10am</p> -->
-          <!-- <p class="text-sm">Wednesday : 6pm</p> -->
-        </div>
-      </section>
-      <footer class="section footer-classic">
-        <div class="footer-body">
-          <div class="container">
-            <div class="row justify-content-xl-between row-40 justify-content-lg-center">
-              <div class="col-lg-6">
-                <div class="row row-20">
-                  <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".1s">
-                    <div class="footer-title">Who We Are</div>
-                    <ul class="nav-list">
-                      <li><a href="about-us.html">About Us</a></li>
-                      <li><a href="ministries.html">Ministries</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="footer-title">Info</div>
-                    <ul class="nav-list">
-                      <li><a href="ministries.html">Gallery</a></li>
-                      <!-- <li><a href="" id="donateButton" ><span id="donateButton">Donate Now</span></a></li> -->
-                      <li>
-                        <a href="#" id="donateButton2"><span>Donate Now </span></a>
-                      </li>
-                      
-                      <!-- Second Modal -->
-                      <div class="modal" id="donateModal2" style="display: none;">
-                        <div class="modal-content">
-                          <h3>Church Account</h3>
-                          <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
-                          <p><strong>Account Sort Code:</strong> 309950</p>
-                          <p><strong>Account Number:</strong> 61605662</p>
-                          <button class="close-modal" id="closeModal2">Close</button>
-                        </div>
-                      </div>
-                    </ul>
-                  </div>
-                  <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="footer-title">Service Times:</div>
-                    <ul class="nav-list" >
-                        <li>Sundays: <br>
-                          Celebration Service : 10:00am 
-                          </li>
-                          <li>Wednesdays: <br>
-                            Dominion Hour : 6:00pm
-                            </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5 inset-right-100 wow fadeInRight" data-wow-delay=".3s">
-                <div class="footer-title">Contact us</div>
-                <ul class="contact-list">
-                  <li>Behind 14 Whickham View Newcastle <br> upon  Tyne, NE15 6UN <br> Questions? Please write us at:<a class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
-                  <li><span>Call us:</span><a class="phone" href="tel:#">02843554156, 07783568067</a></li>
-                </ul>
-                <ul class="social-list">
-                  <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
-                  <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a></li>
-                   <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
-                  <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li>  -->
-                </ul>
-              </div>
-            </div>
+          <div class="col-lg-6 p-xl-0 wow fadeInRight"><img src="images/home-2-660x495.jpg" alt="" width="660"
+              height="495" />
           </div>
         </div>
-        <div class="footer-aside">
-          <div class="container">
-            <div class="row row-xl-40">
-              <div class="col-12 wow fadeInUp" data-wow-delay=".2s">
-                <p>Praise Sanctuary Church is a Family of Faith that is committed to Bible teaching and joyful worship. Children, youth and adults of all ages are ministered to and given opportunities to serve the Lord by serving others. You are invited to join us and experience what it is like to be a part of the family. We have much to offer you. Praise Sanctuary is a Church where each person is made to feel welcomed and wanted. We take seriously our mission statement, which is "To Know Jesus and make Him known; To Follow the Leadership of the Holy Spirit; and to Take God's Word to God's World."</p>
-              </div>
-              <div class="col-12 wow fadeInUp" data-wow-delay=".4s">
-                <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Praise Sanctuary</span><span>.&nbsp;</span><span>All Rights Reserved.Designed By <a href="https://github.com/PEACE-DFG" style="color: #0b51f3;">CODEMaster</a></span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </section>
+    <!--Swiper-->
+    <div>
+      <h2 class="text-center">Testimonies</h2>
+
     </div>
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-      // Second Modal
-  const donateButton2 = document.getElementById("donateButton2");
-  const donateModal2 = document.getElementById("donateModal2");
-  const closeModal2 = document.getElementById("closeModal2");
+    <section class="section section-lg bg-primary">
 
-  donateButton2.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    donateModal2.style.display = "flex"; // Show the second modal
-  });
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="swiper-container swiper-slider swiper-style-1"
+              data-swiper='{"autoplay":{"delay":4567},"effect":"fade"}'>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide context-dark">
+                  <div class="swiper-slide-caption text-center text-lg-left">
+                    <div class="row justify-content-center">
+                      <div class="col-xl-10 p-xl-0">
+                        <div class="row justify-content-center row-20 align-items-center flex-column flex-md-row">
+                          <div class="col-lg-3 p-xl-0"><img src="images/testimony 1.jpg" alt="" width="280"
+                              height="349" />
+                          </div>
+                          <div class="col-lg-9 inset-left-110">
+                            <div class="h3">“I am truly blessed to have been part of Praise Sanctuary this year. It has
+                              transformed my faith and nurtured my spiritual growth. The fellowship and teachings have
+                              uplifted me and, provided invaluable insights and strength. The love and support from the
+                              church family have filled my heart with joy and inspiration.”</div>
+                            <div class="author">Festus Ayomikun</div>
+                            <div class="author-position">Parishioner</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide context-dark">
+                  <div class="swiper-slide-caption text-center text-lg-left">
+                    <div class="row justify-content-center">
+                      <div class="col-xl-10 p-xl-0">
+                        <div class="row justify-content-center align-items-center flex-column flex-md-row row-20">
+                          <div class="col-lg-3 p-xl-0"><img src="images/testimony 2.jpg" alt="" width="280"
+                              height="349" />
+                          </div>
+                          <div class="col-lg-9 inset-left-110">
+                            <div class="h3">“In the short while that the RCCG Praise Sanctuary was established, I have
+                              experienced great stability and renewal from wise counsel and sound teaching of
+                              The WORD of God.”</div>
+                            <div class="author">Femisayo Olofintila</div>
+                            <div class="author-position">Parishioner</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Swiper Pagination-->
+              <div class="swiper-pagination"></div>
+              <!--Swiper Navigation-->
+              <div class="swiper-button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="">
+                  <path d="M5 10V6H18V4H5V0L0 5L5 10Z" fill=""></path>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewbox="0 0 18 10" fill="">
+                  <path d="M5 10V6H18V4H5V0L0 5L5 10Z" fill=""></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  closeModal2.addEventListener("click", function () {
-    donateModal2.style.display = "none"; // Hide the second modal
-  });
+    <section class="section section-vide section-lg video-wrap vide" data-vide-bg="video/video-1">
+      <div class="container text-center context-dark">
+        <div class="h1">Join Our Weekly Activities</div>
+        <!-- <p class="text-sm">Sunday : 10am</p> -->
+        <!-- <p class="text-sm">Wednesday : 6pm</p> -->
+      </div>
+    </section>
+    <footer class="section footer-classic">
+      <div class="footer-body">
+        <div class="container">
+          <div class="row justify-content-xl-between row-40 justify-content-lg-center">
+            <div class="col-lg-6">
+              <div class="row row-20">
+                <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".1s">
+                  <div class="footer-title">Who We Are</div>
+                  <ul class="nav-list">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".2s">
+                  <div class="footer-title">Info</div>
+                  <ul class="nav-list">
+                    <li><a href="ministries.html">Gallery</a></li>
+                    <!-- <li><a href="" id="donateButton" ><span id="donateButton">Donate Now</span></a></li> -->
+                    <li>
+                      <a href="#" id="donateButton2"><span>Donate Now </span></a>
+                    </li>
 
-  // Optional: Close modals when clicking outside of them
-  window.addEventListener("click", function (event) {
-    if (event.target === donateModal1) {
-      donateModal1.style.display = "none";
-    }
-    if (event.target === donateModal2) {
-      donateModal2.style.display = "none";
-    }
-  });
+                    <!-- Second Modal -->
+                    <div class="modal" id="donateModal2" style="display: none;">
+                      <div class="modal-content">
+                        <h3>Church Account</h3>
+                        <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
+                        <p><strong>Account Sort Code:</strong> 309950</p>
+                        <p><strong>Account Number:</strong> 61605662</p>
+                        <button class="close-modal" id="closeModal2">Close</button>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+                <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">
+                  <div class="footer-title">Service Times:</div>
+                  <ul class="nav-list">
+                    <li>Sundays: <br>
+                      Celebration Service : 10:00am
+                    </li>
+                    <li>Wednesdays: <br>
+                      Dominion Hour : 6:00pm
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 inset-right-100 wow fadeInRight" data-wow-delay=".3s">
+              <div class="footer-title">Contact us</div>
+              <ul class="contact-list">
+                <li>Behind 14 Whickham View Newcastle <br> upon Tyne, NE15 6UN <br> Questions? Please write us at:<a
+                    class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
+                <li><span>Call us:</span><a class="phone" href="tel:#">02843554156, 07783568067</a></li>
+              </ul>
+              <ul class="social-list">
+                <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
+                <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a>
+                </li>
+                <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span
+                      class="icon fa fa-facebook-f"></span></a></li>
+                <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li>  -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-aside">
+        <div class="container">
+          <div class="row row-xl-40">
+            <div class="col-12 wow fadeInUp" data-wow-delay=".2s">
+              <p>Praise Sanctuary Church is a Family of Faith that is committed to Bible teaching and joyful worship.
+                Children, youth and adults of all ages are ministered to and given opportunities to serve the Lord by
+                serving others. You are invited to join us and experience what it is like to be a part of the family. We
+                have much to offer you. Praise Sanctuary is a Church where each person is made to feel welcomed and
+                wanted. We take seriously our mission statement, which is "To Know Jesus and make Him known; To Follow
+                the Leadership of the Holy Spirit; and to Take God's Word to God's World."</p>
+            </div>
+            <div class="col-12 wow fadeInUp" data-wow-delay=".4s">
+              <p class="rights"><span>&copy;&nbsp; </span><span
+                  class="copyright-year"></span><span>&nbsp;</span><span>Praise
+                  Sanctuary</span><span>.&nbsp;</span><span>All Rights Reserved.Designed By <a
+                    href="https://github.com/PEACE-DFG" style="color: #0b51f3;">CODEMaster</a></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="snackbars" id="form-output-global"></div>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Second Modal
+    const donateButton2 = document.getElementById("donateButton2");
+    const donateModal2 = document.getElementById("donateModal2");
+    const closeModal2 = document.getElementById("closeModal2");
 
-  const swiper = new Swiper('.swiper', {
-    effect: 'fade',  // Sets fade transition effect
-    fadeEffect: {
-      crossFade: true  // Enables cross-fade between slides
-    },
-    autoplay: {
-      delay: 5000,  // Changes slide every 5 seconds
-      disableOnInteraction: false  // Continues autoplay after user interaction
-    },
-    speed: 1000,  // Transition speed in milliseconds
-    loop: true  // Enables continuous looping
-  });
-    </script>
-  </body>
+    donateButton2.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      donateModal2.style.display = "flex"; // Show the second modal
+    });
+
+    closeModal2.addEventListener("click", function () {
+      donateModal2.style.display = "none"; // Hide the second modal
+    });
+
+    // Optional: Close modals when clicking outside of them
+    window.addEventListener("click", function (event) {
+      if (event.target === donateModal1) {
+        donateModal1.style.display = "none";
+      }
+      if (event.target === donateModal2) {
+        donateModal2.style.display = "none";
+      }
+    });
+
+    const swiper = new Swiper('.swiper', {
+      effect: 'fade',  // Sets fade transition effect
+      fadeEffect: {
+        crossFade: true  // Enables cross-fade between slides
+      },
+      autoplay: {
+        delay: 5000,  // Changes slide every 5 seconds
+        disableOnInteraction: false  // Continues autoplay after user interaction
+      },
+      speed: 1000,  // Transition speed in milliseconds
+      loop: true  // Enables continuous looping
+    });
+  </script>
+</body>
+
 </html>
