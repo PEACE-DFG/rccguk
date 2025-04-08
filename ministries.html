@@ -497,16 +497,16 @@
       const donateModal2 = document.getElementById("donateModal2");
       const closeModal2 = document.getElementById("closeModal2");
 
-      donateButton2.addEventListener("click", function(event) {
+      donateButton2.addEventListener("click", function(event){
         event.preventDefault();
         donateModal2.style.display = "flex";
       });
 
-      closeModal2.addEventListener("click", function() {
+      closeModal2.addEventListener("click", function(){
         donateModal2.style.display = "none";
       });
 
-      window.addEventListener("click", function(event) {
+      window.addEventListener("click", function(event){
         if (event.target === donateModal2) {
           donateModal2.style.display = "none";
         }
