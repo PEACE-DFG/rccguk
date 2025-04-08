@@ -1,22 +1,210 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>RCCG Praise Sanctuary</title>
+    <title>RCCG Praise Sanctuary - Gallery</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Welcome to RCCG Praise Sanctuary - The PaceSetters">
     <meta name="keywords" content="RCCG, Praise Sanctuary, church, New Castle">
-    <meta property="og:title" content="RCCG Praise Sanctuary">
-    <meta property="og:description" content="The PaceSetters">
+    <meta property="og:title" content="RCCG Praise Sanctuary - Gallery">
+    <meta property="og:description" content="Explore our church gallery showcasing moments of worship and fellowship">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rccgpraisesanctuary.org">
+    <meta property="og:url" content="https://rccgpraisesanctuary.org/gallery">
     <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500%7CIbarra+Real+Nova:400,600,600i,700">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      /* Gallery Section Styles */
+      .gallery-section {
+        padding: 60px 0;
+        background-color: #f9f9f9;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      /* Horizontal Carousel */
+      .horizontal-carousel {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        overflow: hidden;
+      }
+      
+      .horizontal-carousel-container {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      
+      .horizontal-carousel-item {
+        min-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+      
+      .horizontal-carousel-item img {
+        width: 100%;
+        height: 950px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .horizontal-carousel-item img:hover {
+        transform: scale(1.02);
+      }
+      
+      .horizontal-carousel-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+      }
+      
+      .horizontal-carousel-prev,
+      .horizontal-carousel-next {
+        background: rgba(74, 111, 40, 0.8);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+      
+      .horizontal-carousel-prev:hover,
+      .horizontal-carousel-next:hover {
+        background: rgba(58, 90, 31, 0.9);
+        transform: scale(1.1);
+      }
+      
+      /* Vertical Carousel */
+      .vertical-carousel {
+        max-width: 800px;
+        margin: 0 auto;
+        height: 950px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      
+      .vertical-carousel-container {
+        height: 100%;
+        transition: transform 0.5s ease;
+      }
+      
+      .vertical-carousel-item {
+        height: 100%;
+      }
+      
+      .vertical-carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .vertical-carousel-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        z-index: 10;
+      }
+      
+      .vertical-carousel-prev,
+      .vertical-carousel-next {
+        background: rgba(74, 111, 40, 0.8);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .vertical-carousel-prev:hover,
+      .vertical-carousel-next:hover {
+        background: rgba(58, 90, 31, 0.9);
+        transform: scale(1.1);
+      }
+      
+      /* Indicators */
+      .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+      }
+      
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .indicator.active {
+        background-color: #4a6f28;
+        transform: scale(1.2);
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .horizontal-carousel-item img {
+          height: 600px;
+        }
+        
+        .vertical-carousel {
+          height: 600px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .horizontal-carousel-item img {
+          height: 600px;
+        }
+        
+        .vertical-carousel {
+          height: 900px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .horizontal-carousel-item img {
+          height: 650px;
+        }
+        
+        .vertical-carousel {
+          height: 600px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -42,8 +230,8 @@
                       <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
                       <div class="unit-body"><a href="tel:#">02843554156</a></div>
                       <div class="unit-left"><span class="icon text-middle mdi-phone-in-talk mdi"></span></div>
-
-                      <div class="unit-body"><a href="tel:#">07783568067</a></div>                    </div>
+                      <div class="unit-body"><a href="tel:#">07783568067</a></div>
+                    </div>
                   </li>
                   <li>
                     <div class="unit unit-spacing-xs align-items-center">
@@ -55,8 +243,7 @@
                 <ul class="social-list">
                   <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
                   <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a></li>
-                   <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
-                  <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li>  -->
+                  <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
                 </ul>
               </div>
             </div>
@@ -74,15 +261,10 @@
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a>
-                      </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="ministries.html">Gallery</a>
-                      </li>
-                     
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About Us</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="ministries.html">Gallery</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
                     </ul>
                   </div>
                 </div>
@@ -91,127 +273,125 @@
           </nav>
         </div>
       </header>
+      
       <!-- Breadcrumbs-->
       <section class="breadcrumbs-custom bg-image bg-none" data-preset='{"title":"Breadcrumbs","category":"header","reload":false,"id":"breadcrumbs"}'>
         <div class="container">
           <div class="h1 breadcrumbs-custom-title" style="text-shadow: 5px 5px 12px white;">Our <br class="d-none d-xl-block"> Service Gallery</div>
-          <p class="breadcrumbs-custom-caption">Explore moments of worship, community, and fellowship from our church services </p>
+          <p class="breadcrumbs-custom-caption">Explore moments of worship, community, and fellowship from our church services</p>
           <ul class="breadcrumbs-custom-path">
             <li><a href="index.html">Home</a></li>
-            <li class="active">Ministries</li>
+            <li class="active">Gallery</li>
           </ul>
         </div>
       </section>
-      <section class="section-lg section bg-default">
-        <div class="container">
-          <div class="row row-narrow-50 row-xl-100" data-lightgallery="group">
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".1s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1834.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Youth ministry</div></a> -->
-          </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1845.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Transformation</div></a> -->
-          </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".5s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1848.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Children</div></a> -->
-          </div>
       
-
-
-
-
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".1s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.11_018cf036.jpg" alt="" width="390" height="495"/>
-                <!-- <div class="float-title">Youth ministry</div></a> -->
-            </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.11_1d57b27d.jpg" alt="" width="390" height="495"/>
-                <!-- <div class="float-title">Transformation</div></a> -->
-            </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".5s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.12_58c4ad1b.jpg" alt="" width="390" height="495"/>
-                <!-- <div class="float-title">Children</div></a> -->
-            </div>
-
-
-
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".1s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1879.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Youth ministry</div></a> -->
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Moments of Worship</h2>
+            <p>Experience the joy and spirit of our services through these captured moments</p>
           </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1877.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Transformation</div></a> -->
-          </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".5s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1876.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Children</div></a> -->
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.11_c7ab1346.jpg" alt="" width="390" height="495"/>
-                <!-- <div class="float-title">Bible study</div></a> -->
+          
+          <!-- Horizontal Carousel -->
+          <div class="horizontal-carousel">
+            <div class="horizontal-carousel-container" id="horizontalCarousel">
+              <div class="horizontal-carousel-item">
+                <img src="images/FAPS1834.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/FAPS1845.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/FAPS1848.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.11_018cf036.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.11_1d57b27d.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.12_97efec2d.jpg" alt="Church service">
+              </div>
+              <div class="horizontal-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.11_c7ab1346.jpg" alt="Church service">
+              </div>
             </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.12_7345f3ec.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Bible study</div></a> -->
-            </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.12_97efec2d.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Bible study</div></a> -->
-            </div>
-
-
-
             
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".1s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1903.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Youth ministry</div></a> -->
+            <div class="horizontal-carousel-controls">
+              <button class="horizontal-carousel-prev" aria-label="Previous image">
+                <span class="icon mdi mdi-chevron-left"></span>
+              </button>
+              <button class="horizontal-carousel-next" aria-label="Next image">
+                <span class="icon mdi mdi-chevron-right"></span>
+              </button>
+            </div>
+            
+            <div class="carousel-indicators" id="horizontalIndicators">
+              <!-- Indicators will be added by JavaScript -->
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1892.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Transformation</div></a> -->
+          
+          <div class="section-title" style="margin-top: 80px;">
+            <h2>Fellowship & Community</h2>
+            <p>Celebrating our church family and shared moments of faith</p>
           </div>
-          <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".5s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/FAPS1874.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Children</div></a> -->
-          </div>
-
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.12_c62fde78.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Bible study</div></a> -->
-          </div>
-            <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.12_6f116985.jpg" alt="" width="390" height="495"/>
-              <!-- <div class="float-title">Bible study</div></a> -->
-          </div>
-          <!-- <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.11_3e0c2eef.jpg" alt="" width="390" height="495"/> -->
-            <!-- <div class="float-title">Bible study</div></a> -->
-        <!-- </div> -->
-        <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.13_c594dbc4.jpg" alt="" width="390" height="495"/>
-          <!-- <div class="float-title">Bible study</div></a> -->
-      </div>
-      <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.13_afb0bffe.jpg" alt="" width="390" height="495"/>
-        <!-- <div class="float-title">Bible study</div></a> -->
-    </div>
-    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.13_9e55683c.jpg" alt="" width="390" height="495"/>
-      <!-- <div class="float-title">Bible study</div></a> -->
-  </div>
-  <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/WhatsApp Image 2025-01-02 at 13.02.13_1624bdd6.jpg" alt="" width="390" height="495"/>
-    <!-- <div class="float-title">Bible study</div></a> -->
-</div>
-<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/IMG-20250103-WA0030.jpg" alt="" width="390" height="495"/>
-  <!-- <div class="float-title">Bible study</div></a> -->
-</div>
-<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/IMG-20250103-WA0031.jpg" alt="" width="390" height="495"/>
-  <!-- <div class="float-title">Bible study</div></a> -->
-</div>
-<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/IMG-20250103-WA0032.jpg" alt="" width="390" height="495"/>
-  <!-- <div class="float-title">Bible study</div></a> -->
-</div>
-<div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s"><a class="gallery-thumbnail" href="#" data-lightgallery="item"><img src="images/IMG-20250103-WA0034.jpg" alt="" width="390" height="495"/>
-  <!-- <div class="float-title">Bible study</div></a> -->
-</div>
-
+          
+          <!-- Vertical Carousel -->
+          <div class="vertical-carousel">
+            <div class="vertical-carousel-container" id="verticalCarousel">
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.12_58c4ad1b.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/FAPS1879.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/FAPS1877.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/FAPS1876.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/FAPS1896.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.11_c7ab1346.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.13_c594dbc4.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.13_c3c16c4b.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.13_afb0bffe.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.13_539b4e57.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.13_9e55683c.jpg" alt="Church service">
+              </div>
+              <div class="vertical-carousel-item">
+                <img src="images/WhatsApp Image 2025-01-02 at 13.02.12_c62fde78.jpg" alt="Church service">
+              </div>
+            </div>
+            
+            <div class="vertical-carousel-controls">
+              <button class="vertical-carousel-prev" aria-label="Previous image">
+                <span class="icon mdi mdi-chevron-up"></span>
+              </button>
+              <button class="vertical-carousel-next" aria-label="Next image">
+                <span class="icon mdi mdi-chevron-down"></span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
+      
       <section class="section section-lg bg-default">
         <div class="container">
           <div class="pre-title text-center wow fadeInUp" data-wow-delay=".1s">Get Closer to God</div>
@@ -219,17 +399,18 @@
           <div class="row row-narrow-50 row-40 row-xl">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
               <div class="thumbnail-classic"><a class="thumbnail-classic__media" href="#"><img src="images/FAPS1896.jpg" alt="" width="610" height="458"/></a>
-                <h3><a href="#">Exceeding faith</a></h3><span class="subtitle-sm">Pastor Taiwo Kupolati                  | Matthew 17:20</span>
+                <h3><a href="#">Exceeding faith</a></h3><span class="subtitle-sm">Pastor Taiwo Kupolati | Matthew 17:20</span>
               </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
               <div class="thumbnail-classic"><a class="thumbnail-classic__media" href="#"><img src="images/FAPS1898.jpg" alt="" width="610" height="458"/></a>
-                <h3><a href="#">Recipe for faith</a></h3><span class="subtitle-sm">Pastor Taiwo Kupolati                  | 2 Peter 1:5-7</span>
+                <h3><a href="#">Recipe for faith</a></h3><span class="subtitle-sm">Pastor Taiwo Kupolati | 2 Peter 1:5-7</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
       <footer class="section footer-classic">
         <div class="footer-body">
           <div class="container">
@@ -248,32 +429,20 @@
                     <div class="footer-title">Info</div>
                     <ul class="nav-list">
                       <li><a href="ministries.html">Gallery</a></li>
-                      <!-- <li><a href="" id="donateButton" ><span id="donateButton">Donate Now</span></a></li> -->
                       <li>
-                        <a href="#" id="donateButton2"><span>Donate Now </span></a>
+                        <a href="#" id="donateButton2"><span>Donate Now</span></a>
                       </li>
-                      
-                      <!-- Second Modal -->
-                      <div class="modal" id="donateModal2" style="display: none;">
-                        <div class="modal-content">
-                          <h3>Church Account</h3>
-                          <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
-                          <p><strong>Account Sort Code:</strong> 309950</p>
-                          <p><strong>Account Number:</strong> 61605662</p>
-                          <button class="close-modal" id="closeModal2">Close</button>
-                        </div>
-                      </div>
                     </ul>
                   </div>
                   <div class="col-sm-4 col-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="footer-title">Service Times:</div>
-                    <ul class="nav-list" >
-                        <li>Sundays: <br>
-                          Celebration Service : 10:00am 
-                          </li>
-                          <li>Wednesdays: <br>
-                            Dominion Hour : 6:00pm
-                            </li>
+                    <ul class="nav-list">
+                      <li>Sundays: <br>
+                        Celebration Service : 10:00am 
+                      </li>
+                      <li>Wednesdays: <br>
+                        Dominion Hour : 6:00pm
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -281,14 +450,13 @@
               <div class="col-lg-5 inset-right-100 wow fadeInRight" data-wow-delay=".3s">
                 <div class="footer-title">Contact us</div>
                 <ul class="contact-list">
-                  <li>Behind 14 Whickham View Newcastle <br> upon  Tyne, NE15 6UN <br> Questions? Please write us at:<a class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
+                  <li>Behind 14 Whickham View Newcastle <br> upon Tyne, NE15 6UN <br> Questions? Please write us at:<a class="link-secondary" href="mailto:#">rccgpsuk@gmail.com</a></li>
                   <li><span>Call us:</span><a class="phone" href="tel:#">02843554156, 07783568067</a></li>
                 </ul>
                 <ul class="social-list">
                   <li><a href="https://www.youtube.com/@rccgpsuk"><span class="icon fa fa-youtube-play"></span></a></li>
                   <li><a href="https://www.instagram.com/rccgpsuk/?hl=en"><span class="icon fa fa-instagram"></span></a></li>
-                   <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
-                  <!-- <li><a href="#"><span class="icon fa fa-rss"></span></a></li>  -->
+                  <li><a href="https://www.facebook.com/profile.php?id=61571279834491&mibextid=ZbWKwL"><span class="icon fa fa-facebook-f"></span></a></li>
                 </ul>
               </div>
             </div>
@@ -301,53 +469,157 @@
                 <p>Praise Sanctuary Church is a Family of Faith that is committed to Bible teaching and joyful worship. Children, youth and adults of all ages are ministered to and given opportunities to serve the Lord by serving others. You are invited to join us and experience what it is like to be a part of the family. We have much to offer you. Praise Sanctuary is a Church where each person is made to feel welcomed and wanted. We take seriously our mission statement, which is "To Know Jesus and make Him known; To Follow the Leadership of the Holy Spirit; and to Take God's Word to God's World."</p>
               </div>
               <div class="col-12 wow fadeInUp" data-wow-delay=".4s">
-                <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Praise Sanctuary</span><span>.&nbsp;</span><span>All Rights Reserved.Designed By <a href="https://github.com/PEACE-DFG" style="color: #0b51f3;">CODEMaster</a></span></p>
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Praise Sanctuary</span><span>.&nbsp;</span><span>All Rights Reserved. Designed By <a href="https://github.com/PEACE-DFG" style="color: #0b51f3;">CODEMaster</a></span></p>
               </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    
+    <!-- Donation Modal -->
+    <div class="modal" id="donateModal2" style="display: none;">
+      <div class="modal-content">
+        <h3>Church Account</h3>
+        <p><strong>Account Name:</strong> RCCG - PRAISE SANCTUARY</p>
+        <p><strong>Account Sort Code:</strong> 309950</p>
+        <p><strong>Account Number:</strong> 61605662</p>
+        <button class="close-modal" id="closeModal2">Close</button>
+      </div>
+    </div>
+    
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      // Second Modal
-  const donateButton2 = document.getElementById("donateButton2");
-  const donateModal2 = document.getElementById("donateModal2");
-  const closeModal2 = document.getElementById("closeModal2");
+      // Donation Modal
+      const donateButton2 = document.getElementById("donateButton2");
+      const donateModal2 = document.getElementById("donateModal2");
+      const closeModal2 = document.getElementById("closeModal2");
 
-  donateButton2.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    donateModal2.style.display = "flex"; // Show the second modal
-  });
+      donateButton2.addEventListener("click", function(event) {
+        event.preventDefault();
+        donateModal2.style.display = "flex";
+      });
 
-  closeModal2.addEventListener("click", function () {
-    donateModal2.style.display = "none"; // Hide the second modal
-  });
+      closeModal2.addEventListener("click", function() {
+        donateModal2.style.display = "none";
+      });
 
-  // Optional: Close modals when clicking outside of them
-  window.addEventListener("click", function (event) {
-    if (event.target === donateModal1) {
-      donateModal1.style.display = "none";
-    }
-    if (event.target === donateModal2) {
-      donateModal2.style.display = "none";
-    }
-  });
+      window.addEventListener("click", function(event) {
+        if (event.target === donateModal2) {
+          donateModal2.style.display = "none";
+        }
+      });
 
-  const swiper = new Swiper('.swiper', {
-    effect: 'fade',  // Sets fade transition effect
-    fadeEffect: {
-      crossFade: true  // Enables cross-fade between slides
-    },
-    autoplay: {
-      delay: 5000,  // Changes slide every 5 seconds
-      disableOnInteraction: false  // Continues autoplay after user interaction
-    },
-    speed: 1000,  // Transition speed in milliseconds
-    loop: true  // Enables continuous looping
-  });
+      // Horizontal Carousel
+      const horizontalCarousel = document.getElementById("horizontalCarousel");
+      const horizontalItems = document.querySelectorAll(".horizontal-carousel-item");
+      const horizontalPrevBtn = document.querySelector(".horizontal-carousel-prev");
+      const horizontalNextBtn = document.querySelector(".horizontal-carousel-next");
+      const horizontalIndicators = document.getElementById("horizontalIndicators");
+      
+      let horizontalCurrentIndex = 0;
+      const horizontalItemCount = horizontalItems.length;
+      
+      // Create indicators
+      for (let i = 0; i < horizontalItemCount; i++) {
+        const indicator = document.createElement("div");
+        indicator.classList.add("indicator");
+        if (i === 0) indicator.classList.add("active");
+        indicator.addEventListener("click", () => {
+          goToHorizontalSlide(i);
+        });
+        horizontalIndicators.appendChild(indicator);
+      }
+      
+      function updateHorizontalCarousel() {
+        horizontalCarousel.style.transform = `translateX(-${horizontalCurrentIndex * 100}%)`;
+        
+        // Update indicators
+        const indicators = document.querySelectorAll("#horizontalIndicators .indicator");
+        indicators.forEach((indicator, index) => {
+          if (index === horizontalCurrentIndex) {
+            indicator.classList.add("active");
+          } else {
+            indicator.classList.remove("active");
+          }
+        });
+      }
+      
+      function goToHorizontalSlide(index) {
+        horizontalCurrentIndex = index;
+        updateHorizontalCarousel();
+      }
+      
+      horizontalNextBtn.addEventListener("click", () => {
+        horizontalCurrentIndex = (horizontalCurrentIndex + 1) % horizontalItemCount;
+        updateHorizontalCarousel();
+      });
+      
+      horizontalPrevBtn.addEventListener("click", () => {
+        horizontalCurrentIndex = (horizontalCurrentIndex - 1 + horizontalItemCount) % horizontalItemCount;
+        updateHorizontalCarousel();
+      });
+      
+      // Auto-rotate horizontal carousel
+      let horizontalAutoRotate = setInterval(() => {
+        horizontalNextBtn.click();
+      }, 5000);
+      
+      // Pause on hover
+      horizontalCarousel.addEventListener("mouseenter", () => {
+        clearInterval(horizontalAutoRotate);
+      });
+      
+      horizontalCarousel.addEventListener("mouseleave", () => {
+        horizontalAutoRotate = setInterval(() => {
+          horizontalNextBtn.click();
+        }, 5000);
+      });
+      
+      // Vertical Carousel
+      const verticalCarousel = document.getElementById("verticalCarousel");
+      const verticalItems = document.querySelectorAll(".vertical-carousel-item");
+      const verticalPrevBtn = document.querySelector(".vertical-carousel-prev");
+      const verticalNextBtn = document.querySelector(".vertical-carousel-next");
+      
+      let verticalCurrentIndex = 0;
+      const verticalItemCount = verticalItems.length;
+      
+      function updateVerticalCarousel() {
+        verticalCarousel.style.transform = `translateY(-${verticalCurrentIndex * 100}%)`;
+      }
+      
+      verticalNextBtn.addEventListener("click", () => {
+        verticalCurrentIndex = (verticalCurrentIndex + 1) % verticalItemCount;
+        updateVerticalCarousel();
+      });
+      
+      verticalPrevBtn.addEventListener("click", () => {
+        verticalCurrentIndex = (verticalCurrentIndex - 1 + verticalItemCount) % verticalItemCount;
+        updateVerticalCarousel();
+      });
+      
+      // Auto-rotate vertical carousel (slower)
+      let verticalAutoRotate = setInterval(() => {
+        verticalNextBtn.click();
+      }, 7000);
+      
+      // Pause on hover
+      verticalCarousel.addEventListener("mouseenter", () => {
+        clearInterval(verticalAutoRotate);
+      });
+      
+      verticalCarousel.addEventListener("mouseleave", () => {
+        verticalAutoRotate = setInterval(() => {
+          verticalNextBtn.click();
+        }, 7000);
+      });
+      
+      // Initialize carousels
+      updateHorizontalCarousel();
+      updateVerticalCarousel();
     </script>
   </body>
 </html>
